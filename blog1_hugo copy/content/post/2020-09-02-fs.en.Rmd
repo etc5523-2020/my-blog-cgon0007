@@ -1,0 +1,95 @@
+---
+title: what is the COVID_19
+author: chenjie
+date: '2020-08-30'
+slug: what is the COVID_19
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-09-02T14:55:33+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+#hi i am chenjie :D
+2020 is not a good period. People all over the world have been badly affected by this virus. For example, we cannot go back to school for offline courses. This is an extraordinary period, so each of us should pay great attention to this epidemic and cannot be taken lightly.
+First, let’s take a look at popular science. 
+#What is COVID-19?
+*Corona Virus Disease 2019 (COVID-19), abbreviated as "New coronavirus", named by the World Health Organization as "Covid-19" refers to pneumonia caused by the 2019 new coronavirus infection.*
+#if i am positve COVID, what happend?
+*Novel coronavirus pneumonia is mainly manifested by fever, dry cough, fatigue, etc. A few patients are accompanied by nasal congestion, runny nose, diarrhea and other upper respiratory and digestive tract symptoms. Severe cases often have difficulty breathing after 1 week, and severe cases rapidly progress to acute respiratory distress syndrome, septic shock, difficult to correct metabolic acidosis, coagulation dysfunction, and multiple organ failure.*
+```{r  message=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(maps)
+library(viridis)
+library(readr)
+
+library(sf)
+library(tmap)
+library(spData)
+
+
+```
+
+```{r  message=FALSE,include=FALSE}
+library(readr)
+X08_30_2020 <- read_csv("~/Downloads/08-30-2020.csv")
+View(X08_30_2020)
+```
+```{r message=FALSE,include=FALSE }
+mexico <- X08_30_2020 %>% 
+  filter(`Country_Region`=="Mexico")
+```
+```{r message=FALSE,include=FALSE} 
+world <-map_data("world")
+ggplot() +geom_polygon(data=world, aes(x=long, y=lat, group=group), fill="grey")
+```
+```{r}
+mybreaks<- c(1, 20, 100, 1000, 50000)
+mylabels<- c("1-19", "20-99", "100-999","1,000-49,999", "50,000+")
+ggplot() +
+  geom_polygon(data=world, aes(x=long, y=lat,group=group), fill="grey", alpha=0.8) +
+  geom_point(data=mexico, aes(x=Long_, y=Lat,size=`Confirmed`,color=`Confirmed`), alpha=0.2) +
+  scale_size_continuous(name="Confirmedcases", trans="log", range=c(1,7), breaks=mybreaks,labels=mylabels) +
+  scale_colour_viridis_c(option="inferno", direction=-1,name="Confirmed cases", trans="log", breaks=mybreaks,labels=mylabels) +
+  guides(colour=guide_legend()) +
+  theme_void() +
+  theme(legend.position="bottom")
+```
+```{r}
+mybreaks<- c(1, 20, 100, 1000, 50000)
+mylabels<- c("1-19", "20-99", "100-999","1,000-49,999", "50,000+")
+ggplot() +
+  geom_polygon(data=world, aes(x=long, y=lat,group=group), fill="grey", alpha=0.3) +
+  geom_point(data=X08_30_2020, aes(x=Long_, y=Lat,size=`Confirmed`,color=`Confirmed`), alpha=0.5) +
+  scale_size_continuous(name="Confirmedcases", trans="log", range=c(1,7), breaks=mybreaks,labels=mylabels) +
+  scale_colour_viridis_c(option="inferno", direction=-1,name="Confirmed cases", trans="log", breaks=mybreaks,labels=mylabels) +
+  guides(colour=guide_legend()) +
+  theme_void() +
+  theme(legend.position="bottom")
+```
+Now that we have a basic understanding of this virus, let's continue to see how big the coverage of this virus is.
+
+It can be clearly seen from the map that, except for the Antarctic and Arctic, this virus basically covers the whole world, and what I want to study today is Mexico. We can see from the map of Mexico that Mexico is also very infected. One of the countries.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

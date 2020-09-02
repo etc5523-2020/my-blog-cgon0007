@@ -1,0 +1,50 @@
+---
+title: how about mexico?
+author: chenjie
+date: '2020-09-02'
+slug: how-about-mexico
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-09-02T15:57:24+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p>#hi :D
+The main content of the second post is graphs. You can definitely find the connection between the plots. We can compare and find that in areas with population density, there will be more people who are sick. Although it is a very simple truth, I still Try to show it to you with pictures and let you discover the fun.
+And there is also a rule that I found when I looked at the icons and when I checked the data online. If you are familiar with Mexico (not familiar with taco food haha:), you will find that the place with the most patients is not the most developed economy place.</p>
+<pre class="r"><code>library(tidyverse)
+library(ggplot2)
+library(maps)
+library(viridis)
+library(readr)
+
+library(sf)
+library(tmap)
+library(spData)</code></pre>
+<pre class="r"><code>library(&quot;mxmaps&quot;)
+
+df_mxstate$value &lt;- df_mxstate$pop
+mxstate_choropleth(df_mxstate,
+                   title = &quot;Total population, by state&quot;) </code></pre>
+<p><img src="/post/2020-09-02-how-about-mexico.en_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre class="r"><code>ggplot(mexico)+
+  geom_point(aes(x=Province_State,y=Confirmed))</code></pre>
+<p><img src="/post/2020-09-02-how-about-mexico.en_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code>library(coronavirus)
+data(&quot;coronavirus&quot;)
+mexico1 &lt;- coronavirus %&gt;% 
+  filter(`country`==&quot;Mexico&quot;)</code></pre>
+<pre class="r"><code>ggplot(mexico1) +
+  geom_line(aes(x=date , y=cases)) </code></pre>
+<p><img src="/post/2020-09-02-how-about-mexico.en_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>

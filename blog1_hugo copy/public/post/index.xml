@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Academic</title>
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 02 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Posts</title>
+      <link>/post/</link>
+    </image>
+    
+    <item>
+      <title>how about mexico?</title>
+      <link>/post/how-about-mexico/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/how-about-mexico/</guid>
+      <description>
+
+
+&lt;p&gt;#hi :D
+The main content of the second post is graphs. You can definitely find the connection between the plots. We can compare and find that in areas with population density, there will be more people who are sick. Although it is a very simple truth, I still Try to show it to you with pictures and let you discover the fun.
+And there is also a rule that I found when I looked at the icons and when I checked the data online. If you are familiar with Mexico (not familiar with taco food haha:), you will find that the place with the most patients is not the most developed economy place.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(ggplot2)
+library(maps)
+library(viridis)
+library(readr)
+
+library(sf)
+library(tmap)
+library(spData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(&amp;quot;mxmaps&amp;quot;)
+
+df_mxstate$value &amp;lt;- df_mxstate$pop
+mxstate_choropleth(df_mxstate,
+                   title = &amp;quot;Total population, by state&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-09-02-how-about-mexico.en_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mexico)+
+  geom_point(aes(x=Province_State,y=Confirmed))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-09-02-how-about-mexico.en_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(coronavirus)
+data(&amp;quot;coronavirus&amp;quot;)
+mexico1 &amp;lt;- coronavirus %&amp;gt;% 
+  filter(`country`==&amp;quot;Mexico&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(mexico1) +
+  geom_line(aes(x=date , y=cases)) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-09-02-how-about-mexico.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>reference list</title>
+      <link>/post/citation/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/citation/</guid>
+      <description>
+
+
+&lt;p&gt;hi :D
+here is my citation:
+1
+author = {JHU CSSE},
+title = Johns Hopkins University Center for SystemsScience and Engineering ,
+publisher = {JHU CSSE},
+year = {2019},
+url = {&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//systems.jhu.edu&#34; class=&#34;uri&#34;&gt;https://link.zhihu.com/?target=https%3A//systems.jhu.edu&lt;/a&gt;},&lt;/p&gt;
+&lt;p&gt;2
+&lt;span class=&#34;citation&#34;&gt;@Manual&lt;/span&gt;{,
+title = {coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset},
+author = {Rami Krispin and Jarrett Byrnes},
+year = {2020},
+note = {R package version 0.3.0},
+url = {&lt;a href=&#34;https://CRAN.R-project.org/package=coronavirus&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=coronavirus&lt;/a&gt;},
+publications = Rami Krispin and Jarrett Byrnes (2020). coronavirus: The 2019 Novel Coronavirus
+COVID-19 (2019-nCoV) Dataset. R package version 0.3.0.
+}&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>table bolg</title>
+      <link>/post/table-bolg/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/table-bolg/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/jquery-sparkline/jquery.sparkline.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery-sparkline/jquery.sparkline.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/sparkline-binding/sparkline.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;hi :D
+The third part is the table area, where you can find the data you want to find about Mexico. There is the following table for you to explore&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(ggplot2)
+library(maps)
+library(viridis)
+library(readr)
+
+library(sf)
+library(tmap)
+library(spData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;DT::datatable(mexico,options = list(pagelength = 10))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;data&#34;:[[&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;,&#34;6&#34;,&#34;7&#34;,&#34;8&#34;,&#34;9&#34;,&#34;10&#34;,&#34;11&#34;,&#34;12&#34;,&#34;13&#34;,&#34;14&#34;,&#34;15&#34;,&#34;16&#34;,&#34;17&#34;,&#34;18&#34;,&#34;19&#34;,&#34;20&#34;,&#34;21&#34;,&#34;22&#34;,&#34;23&#34;,&#34;24&#34;,&#34;25&#34;,&#34;26&#34;,&#34;27&#34;,&#34;28&#34;,&#34;29&#34;,&#34;30&#34;,&#34;31&#34;,&#34;32&#34;],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[&#34;Aguascalientes&#34;,&#34;Baja California&#34;,&#34;Baja California Sur&#34;,&#34;Campeche&#34;,&#34;Chiapas&#34;,&#34;Chihuahua&#34;,&#34;Ciudad de Mexico&#34;,&#34;Coahuila&#34;,&#34;Colima&#34;,&#34;Durango&#34;,&#34;Guanajuato&#34;,&#34;Guerrero&#34;,&#34;Hidalgo&#34;,&#34;Jalisco&#34;,&#34;Mexico&#34;,&#34;Michoacan&#34;,&#34;Morelos&#34;,&#34;Nayarit&#34;,&#34;Nuevo Leon&#34;,&#34;Oaxaca&#34;,&#34;Puebla&#34;,&#34;Queretaro&#34;,&#34;Quintana Roo&#34;,&#34;San Luis Potosi&#34;,&#34;Sinaloa&#34;,&#34;Sonora&#34;,&#34;Tabasco&#34;,&#34;Tamaulipas&#34;,&#34;Tlaxcala&#34;,&#34;Veracruz&#34;,&#34;Yucatan&#34;,&#34;Zacatecas&#34;],[&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;,&#34;Mexico&#34;],[&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;,&#34;2020-08-31T04:28:27Z&#34;],[21.8853,30.8406,26.0444,19.8301,16.7569,28.633,19.4326,27.0587,19.1223,24.5593,21.019,17.4392,20.0911,20.6595,19.4969,19.5665,18.6813,21.7514,25.5922,17.0732,19.0414,20.5888,19.1817,22.1565,25.1721,29.2972,17.8409,24.2669,19.3139,19.1738,20.7099,22.7709],[-102.2916,-115.2838,-111.6661,-90.5349,-93.1292,-106.0691,-99.1332,-101.7068,-104.0072,-104.6588,-101.2574,-99.5451,-98.7624,-103.3494,-99.7233,-101.7068,-99.1013,-104.8455,-99.9962,-96.7266,-98.2063,-100.3899,-88.4791,-100.9855,-107.4795,-110.3309,-92.6189,-98.8363,-98.2404,-96.1342,-89.0943,-102.5832],[5568,16840,7568,5567,6257,7698,97855,21516,3688,6379,31253,14710,10222,20131,67486,14957,5205,4994,28673,13650,26791,6264,10294,17938,16016,21379,28200,24314,6327,28168,14678,5255],[405,3130,351,749,1001,1122,10508,1367,428,435,2023,1654,1590,2408,8002,1146,963,579,2227,1236,3494,719,1387,1159,2753,2643,2560,1789,898,3649,1304,479],[4765,12966,6335,4629,5177,5853,79734,18085,2725,5170,26104,12255,7785,15903,55917,12398,3950,4017,23312,11806,22000,4874,8261,15243,12539,17874,24484,21464,5097,23029,11911,4062],[398,744,882,189,79,723,7613,2064,535,774,3126,801,847,1820,3567,1413,292,398,3134,608,1297,671,646,1536,724,862,1156,1061,332,1490,1463,714],[&#34;Aguascalientes, Mexico&#34;,&#34;Baja California, Mexico&#34;,&#34;Baja California Sur, Mexico&#34;,&#34;Campeche, Mexico&#34;,&#34;Chiapas, Mexico&#34;,&#34;Chihuahua, Mexico&#34;,&#34;Ciudad de Mexico, Mexico&#34;,&#34;Coahuila, Mexico&#34;,&#34;Colima, Mexico&#34;,&#34;Durango, Mexico&#34;,&#34;Guanajuato, Mexico&#34;,&#34;Guerrero, Mexico&#34;,&#34;Hidalgo, Mexico&#34;,&#34;Jalisco, Mexico&#34;,&#34;Mexico, Mexico&#34;,&#34;Michoacan, Mexico&#34;,&#34;Morelos, Mexico&#34;,&#34;Nayarit, Mexico&#34;,&#34;Nuevo Leon, Mexico&#34;,&#34;Oaxaca, Mexico&#34;,&#34;Puebla, Mexico&#34;,&#34;Queretaro, Mexico&#34;,&#34;Quintana Roo, Mexico&#34;,&#34;San Luis Potosi, Mexico&#34;,&#34;Sinaloa, Mexico&#34;,&#34;Sonora, Mexico&#34;,&#34;Tabasco, Mexico&#34;,&#34;Tamaulipas, Mexico&#34;,&#34;Tlaxcala, Mexico&#34;,&#34;Veracruz, Mexico&#34;,&#34;Yucatan, Mexico&#34;,&#34;Zacatecas, Mexico&#34;],[388.11265583232,463.290551403792,940.465361348464,556.356727898886,109.190214169529,202.499706036085,1085.02995738273,668.464482775762,469.717367188306,341.306241425878,501.80028660081,402.236995522071,331.19341734453,239.378536172486,387.232116062909,309.963876577304,254.640523899028,387.561104510345,511.091230488723,329.424246058915,405.65067406814,274.780590067629,597.356520406973,625.858732749459,507.369465456363,695.309692348471,1096.30068495467,666.027137441989,458.474606361833,329.841395563535,649.728342905,315.345535895383],[7.27370689655172,18.5866983372922,4.63794926004228,13.4542841746003,15.9980821479942,14.5752143413874,10.7383373358541,6.35341141476111,11.6052060737527,6.81925066624863,6.47297859405497,11.2440516655337,15.5546859714342,11.96165118474,11.8572741012951,7.66196429765327,18.5014409221902,11.5939126952343,7.7668887106337,9.05494505494505,13.0416931058938,11.478288633461,13.4738682727803,6.4611439402386,17.1890609390609,12.3625988119182,9.07801418439716,7.35790079789422,14.19314050893,12.9544163589889,8.88404414770405,9.1151284490961]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;FIPS&lt;\/th&gt;\n      &lt;th&gt;Admin2&lt;\/th&gt;\n      &lt;th&gt;Province_State&lt;\/th&gt;\n      &lt;th&gt;Country_Region&lt;\/th&gt;\n      &lt;th&gt;Last_Update&lt;\/th&gt;\n      &lt;th&gt;Lat&lt;\/th&gt;\n      &lt;th&gt;Long_&lt;\/th&gt;\n      &lt;th&gt;Confirmed&lt;\/th&gt;\n      &lt;th&gt;Deaths&lt;\/th&gt;\n      &lt;th&gt;Recovered&lt;\/th&gt;\n      &lt;th&gt;Active&lt;\/th&gt;\n      &lt;th&gt;Combined_Key&lt;\/th&gt;\n      &lt;th&gt;Incidence_Rate&lt;\/th&gt;\n      &lt;th&gt;Case-Fatality_Ratio&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;pagelength&#34;:10,&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[1,6,7,8,9,10,11,13,14]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+library(formattable)
+mexico %&amp;gt;%
+select(Confirmed,Deaths,Recovered) %&amp;gt;%
+cor() %&amp;gt;%
+as.data.frame() %&amp;gt;%
+rownames_to_column(“variable”) %&amp;gt;%
+formattable(list(area(col = 3.5)))&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mexico %&amp;gt;% 
+  select_if(is.numeric) %&amp;gt;% 
+  pivot_longer(everything(), values_to = &amp;quot;Confirmed&amp;quot;, names_to = &amp;quot;Province_State&amp;quot;) %&amp;gt;% 
+  group_by(Province_State) %&amp;gt;% 
+  filter(!is.na(Confirmed)) %&amp;gt;% 
+  summarise(n = n(), mean = mean(Confirmed), sd = sd(Confirmed), min = min(Confirmed),
+            Q1 = quantile(Confirmed, 0.25), 
+            Q3 = quantile(Confirmed, 0.75), max = max(Confirmed)) %&amp;gt;% 
+  slice(c(2, 1, 4, 3, 5)) %&amp;gt;% 
+  mutate(Province_State = recode(Province_State,
+                          bill_length_mm = &amp;quot;Bill length (mm)&amp;quot;,
+                          bill_depth_mm = &amp;quot;Bill depth (mm)&amp;quot;,
+                          flipper_length_mm = &amp;quot;Flipper length (mm)&amp;quot;,
+                          body_mass_g = &amp;quot;Body mass (g)&amp;quot;,
+                          year = &amp;quot;Year&amp;quot;),
+         mean = scales::comma(mean, 0.01),
+         sd = scales::comma(sd, 0.01),
+         min = round(min, 1), max = round(max, 1), 
+         Q1 = round(Q1, 1), Q3 = round(Q3, 1)) %&amp;gt;% 
+  kable(col.names = c(&amp;quot;Statistic&amp;quot;, &amp;quot;N&amp;quot;, &amp;quot;Mean&amp;quot;, &amp;quot;St. Dev.&amp;quot;, &amp;quot;Min&amp;quot;, &amp;quot;Pctl(25)&amp;quot;, &amp;quot;Pctl(75)&amp;quot;, &amp;quot;Max&amp;quot;), caption = &amp;quot;Summary statistics&amp;quot;, align = &amp;quot;lrrrrrrr&amp;quot;,
+        booktabs = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:unnamed-chunk-5&#34;&gt;Table 1: &lt;/span&gt;Summary statistics
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Statistic
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+N
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Mean
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+St. Dev.
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Min
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Pctl(25)
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Pctl(75)
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Max
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Case-Fatality_Ratio
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+32
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+11.17
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3.72
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+4.6
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+13.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+18.6
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Active
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+32
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1,311.22
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1,429.61
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+79.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+636.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1469.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7613.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Deaths
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+32
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2,004.94
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2,136.81
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+351.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+860.8
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2446.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+10508.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Confirmed
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+32
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+18,620.03
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+19,178.46
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+3688.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6311.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+22215.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+97855.0
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Incidence_Rate
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+32
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+484.41
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+233.60
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+109.2
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+329.7
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+604.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1096.3
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mexico %&amp;gt;% 
+  group_by(Province_State) %&amp;gt;% 
+  summarise(
+    fivenum = list(setNames(as.vector(summary(na.omit(Confirmed))),
+                   c(&amp;quot;Min&amp;quot;, &amp;quot;Q1&amp;quot;, &amp;quot;Median&amp;quot;, &amp;quot;Mean&amp;quot;, &amp;quot;Q3&amp;quot;, &amp;quot;Max&amp;quot;))),
+    distribution = spk_chr(Confirmed, type = &amp;quot;box&amp;quot;)) %&amp;gt;% 
+  unnest_wider(fivenum) %&amp;gt;% 
+  datatable(escape = FALSE,
+            options = list(paging = FALSE,
+                           dom = &amp;quot;t&amp;quot;,
+                           fnDrawCallback = htmlwidgets::JS(
+  &amp;#39;
+function(){
+  HTMLWidgets.staticRender();
+}
+&amp;#39;
+))) %&amp;gt;% 
+  spk_add_deps() %&amp;gt;% 
+  formatRound(columns = c(&amp;quot;Min&amp;quot;, &amp;quot;Q1&amp;quot;, &amp;quot;Mean&amp;quot;, &amp;quot;Median&amp;quot;, &amp;quot;Q3&amp;quot;, &amp;quot;Max&amp;quot;), digits = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;data&#34;:[[&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;,&#34;6&#34;,&#34;7&#34;,&#34;8&#34;,&#34;9&#34;,&#34;10&#34;,&#34;11&#34;,&#34;12&#34;,&#34;13&#34;,&#34;14&#34;,&#34;15&#34;,&#34;16&#34;,&#34;17&#34;,&#34;18&#34;,&#34;19&#34;,&#34;20&#34;,&#34;21&#34;,&#34;22&#34;,&#34;23&#34;,&#34;24&#34;,&#34;25&#34;,&#34;26&#34;,&#34;27&#34;,&#34;28&#34;,&#34;29&#34;,&#34;30&#34;,&#34;31&#34;,&#34;32&#34;],[&#34;Aguascalientes&#34;,&#34;Baja California&#34;,&#34;Baja California Sur&#34;,&#34;Campeche&#34;,&#34;Chiapas&#34;,&#34;Chihuahua&#34;,&#34;Ciudad de Mexico&#34;,&#34;Coahuila&#34;,&#34;Colima&#34;,&#34;Durango&#34;,&#34;Guanajuato&#34;,&#34;Guerrero&#34;,&#34;Hidalgo&#34;,&#34;Jalisco&#34;,&#34;Mexico&#34;,&#34;Michoacan&#34;,&#34;Morelos&#34;,&#34;Nayarit&#34;,&#34;Nuevo Leon&#34;,&#34;Oaxaca&#34;,&#34;Puebla&#34;,&#34;Queretaro&#34;,&#34;Quintana Roo&#34;,&#34;San Luis Potosi&#34;,&#34;Sinaloa&#34;,&#34;Sonora&#34;,&#34;Tabasco&#34;,&#34;Tamaulipas&#34;,&#34;Tlaxcala&#34;,&#34;Veracruz&#34;,&#34;Yucatan&#34;,&#34;Zacatecas&#34;],[5568,16840,7568,5567,6257,7698,97855,21516,3688,6379,31253,14710,10222,20131,67486,14957,5205,4994,28673,13650,26791,6264,10294,17938,16016,21379,28200,24314,6327,28168,14678,5255],[5568,16840,7568,5567,6257,7698,97855,21516,3688,6379,31253,14710,10222,20131,67486,14957,5205,4994,28673,13650,26791,6264,10294,17938,16016,21379,28200,24314,6327,28168,14678,5255],[5568,16840,7568,5567,6257,7698,97855,21516,3688,6379,31253,14710,10222,20131,67486,14957,5205,4994,28673,13650,26791,6264,10294,17938,16016,21379,28200,24314,6327,28168,14678,5255],[5568,16840,7568,5567,6257,7698,97855,21516,3688,6379,31253,14710,10222,20131,67486,14957,5205,4994,28673,13650,26791,6264,10294,17938,16016,21379,28200,24314,6327,28168,14678,5255],[5568,16840,7568,5567,6257,7698,97855,21516,3688,6379,31253,14710,10222,20131,67486,14957,5205,4994,28673,13650,26791,6264,10294,17938,16016,21379,28200,24314,6327,28168,14678,5255],[5568,16840,7568,5567,6257,7698,97855,21516,3688,6379,31253,14710,10222,20131,67486,14957,5205,4994,28673,13650,26791,6264,10294,17938,16016,21379,28200,24314,6327,28168,14678,5255],[&#34;&lt;span id=\&#34;htmlwidget-737a4d93027660dd9e11\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-737a4d93027660dd9e11\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:5568,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-4e61ba15be36c872019c\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-4e61ba15be36c872019c\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:16840,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-11623f7bf8044d70931e\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-11623f7bf8044d70931e\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:7568,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-39cc3e34d4bfbd3cfb4d\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-39cc3e34d4bfbd3cfb4d\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:5567,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-c9ff60d0d3b155f03943\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-c9ff60d0d3b155f03943\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:6257,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-3d6e1ed4352e40ecbb76\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-3d6e1ed4352e40ecbb76\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:7698,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-119658306542a7d4a439\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-119658306542a7d4a439\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:97855,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-f102a8468d4d98aa6a4d\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-f102a8468d4d98aa6a4d\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:21516,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-97fcbb5c9d30afae387b\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-97fcbb5c9d30afae387b\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:3688,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-70b62b6e779fa91caae1\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-70b62b6e779fa91caae1\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:6379,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-9c35d0af05ec796837be\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-9c35d0af05ec796837be\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:31253,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-ff26ece8b0401672e7bf\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-ff26ece8b0401672e7bf\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:14710,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-859226d43c65039a5e2a\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-859226d43c65039a5e2a\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:10222,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-d2ed73eac1f813f9cb1e\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-d2ed73eac1f813f9cb1e\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:20131,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-07ba2b50199a410a32b5\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-07ba2b50199a410a32b5\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:67486,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-80ec5e183b7216fa1580\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-80ec5e183b7216fa1580\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:14957,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-4b4a12add00712cfa74e\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-4b4a12add00712cfa74e\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:5205,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-35fa4afc2488f376fe8f\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-35fa4afc2488f376fe8f\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:4994,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-7c894f4600a607bb38ce\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-7c894f4600a607bb38ce\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:28673,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-c577843add6afd64ca8c\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-c577843add6afd64ca8c\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:13650,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-d10e63a250f8948e5631\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-d10e63a250f8948e5631\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:26791,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-cccd71155cfc376e5035\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-cccd71155cfc376e5035\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:6264,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-bc7eb19b87a2fe46425c\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-bc7eb19b87a2fe46425c\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:10294,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-123389e16ed074871165\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-123389e16ed074871165\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:17938,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-e4d5e00d4d8f37acff76\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-e4d5e00d4d8f37acff76\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:16016,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-5035eab46dc26dcc36d4\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-5035eab46dc26dcc36d4\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:21379,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-41f18523ec3d31ddfcc3\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-41f18523ec3d31ddfcc3\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:28200,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-ab2c691da37596d68ee8\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-ab2c691da37596d68ee8\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:24314,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-7b1d277a20babe8f4872\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-7b1d277a20babe8f4872\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:6327,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-78e49639d27f502bd28a\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-78e49639d27f502bd28a\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:28168,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-30d0522bb1f3a3c9bead\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-30d0522bb1f3a3c9bead\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:14678,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;,&#34;&lt;span id=\&#34;htmlwidget-2369530dcffbda114b99\&#34; class=\&#34;sparkline html-widget\&#34;&gt;&lt;\/span&gt;\n&lt;script type=\&#34;application/json\&#34; data-for=\&#34;htmlwidget-2369530dcffbda114b99\&#34;&gt;{\&#34;x\&#34;:{\&#34;values\&#34;:5255,\&#34;options\&#34;:{\&#34;type\&#34;:\&#34;box\&#34;,\&#34;height\&#34;:20,\&#34;width\&#34;:60},\&#34;width\&#34;:60,\&#34;height\&#34;:20},\&#34;evals\&#34;:[],\&#34;jsHooks\&#34;:[]}&lt;\/script&gt;&#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;Province_State&lt;\/th&gt;\n      &lt;th&gt;Min&lt;\/th&gt;\n      &lt;th&gt;Q1&lt;\/th&gt;\n      &lt;th&gt;Median&lt;\/th&gt;\n      &lt;th&gt;Mean&lt;\/th&gt;\n      &lt;th&gt;Q3&lt;\/th&gt;\n      &lt;th&gt;Max&lt;\/th&gt;\n      &lt;th&gt;distribution&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;paging&#34;:false,&#34;dom&#34;:&#34;t&#34;,&#34;fnDrawCallback&#34;:&#34;\nfunction(){\n  HTMLWidgets.staticRender();\n}\n&#34;,&#34;columnDefs&#34;:[{&#34;targets&#34;:2,&#34;render&#34;:&#34;function(data, type, row, meta) { return DTWidget.formatRound(data, 2, 3, \&#34;,\&#34;, \&#34;.\&#34;); }&#34;},{&#34;targets&#34;:3,&#34;render&#34;:&#34;function(data, type, row, meta) { return DTWidget.formatRound(data, 2, 3, \&#34;,\&#34;, \&#34;.\&#34;); }&#34;},{&#34;targets&#34;:5,&#34;render&#34;:&#34;function(data, type, row, meta) { return DTWidget.formatRound(data, 2, 3, \&#34;,\&#34;, \&#34;.\&#34;); }&#34;},{&#34;targets&#34;:4,&#34;render&#34;:&#34;function(data, type, row, meta) { return DTWidget.formatRound(data, 2, 3, \&#34;,\&#34;, \&#34;.\&#34;); }&#34;},{&#34;targets&#34;:6,&#34;render&#34;:&#34;function(data, type, row, meta) { return DTWidget.formatRound(data, 2, 3, \&#34;,\&#34;, \&#34;.\&#34;); }&#34;},{&#34;targets&#34;:7,&#34;render&#34;:&#34;function(data, type, row, meta) { return DTWidget.formatRound(data, 2, 3, \&#34;,\&#34;, \&#34;.\&#34;); }&#34;},{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[2,3,4,5,6,7]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false}},&#34;evals&#34;:[&#34;options.fnDrawCallback&#34;,&#34;options.columnDefs.0.render&#34;,&#34;options.columnDefs.1.render&#34;,&#34;options.columnDefs.2.render&#34;,&#34;options.columnDefs.3.render&#34;,&#34;options.columnDefs.4.render&#34;,&#34;options.columnDefs.5.render&#34;],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>what is the COVID_19</title>
+      <link>/post/what-is-the-covid_19/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/post/what-is-the-covid_19/</guid>
+      <description>
+
+
+&lt;p&gt;#hi i am chenjie :D
+2020 is not a good period. People all over the world have been badly affected by this virus. For example, we cannot go back to school for offline courses. This is an extraordinary period, so each of us should pay great attention to this epidemic and cannot be taken lightly.
+First, let’s take a look at popular science.
+#What is COVID-19?
+&lt;em&gt;Corona Virus Disease 2019 (COVID-19), abbreviated as “New coronavirus”, named by the World Health Organization as “Covid-19” refers to pneumonia caused by the 2019 new coronavirus infection.&lt;/em&gt;
+#if i am positve COVID, what happend?
+&lt;em&gt;Novel coronavirus pneumonia is mainly manifested by fever, dry cough, fatigue, etc. A few patients are accompanied by nasal congestion, runny nose, diarrhea and other upper respiratory and digestive tract symptoms. Severe cases often have difficulty breathing after 1 week, and severe cases rapidly progress to acute respiratory distress syndrome, septic shock, difficult to correct metabolic acidosis, coagulation dysfunction, and multiple organ failure.&lt;/em&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(ggplot2)
+library(maps)
+library(viridis)
+library(readr)
+
+library(sf)
+library(tmap)
+library(spData)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mybreaks&amp;lt;- c(1, 20, 100, 1000, 50000)
+mylabels&amp;lt;- c(&amp;quot;1-19&amp;quot;, &amp;quot;20-99&amp;quot;, &amp;quot;100-999&amp;quot;,&amp;quot;1,000-49,999&amp;quot;, &amp;quot;50,000+&amp;quot;)
+ggplot() +
+  geom_polygon(data=world, aes(x=long, y=lat,group=group), fill=&amp;quot;grey&amp;quot;, alpha=0.8) +
+  geom_point(data=mexico, aes(x=Long_, y=Lat,size=`Confirmed`,color=`Confirmed`), alpha=0.2) +
+  scale_size_continuous(name=&amp;quot;Confirmedcases&amp;quot;, trans=&amp;quot;log&amp;quot;, range=c(1,7), breaks=mybreaks,labels=mylabels) +
+  scale_colour_viridis_c(option=&amp;quot;inferno&amp;quot;, direction=-1,name=&amp;quot;Confirmed cases&amp;quot;, trans=&amp;quot;log&amp;quot;, breaks=mybreaks,labels=mylabels) +
+  guides(colour=guide_legend()) +
+  theme_void() +
+  theme(legend.position=&amp;quot;bottom&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-09-02-fs.en_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mybreaks&amp;lt;- c(1, 20, 100, 1000, 50000)
+mylabels&amp;lt;- c(&amp;quot;1-19&amp;quot;, &amp;quot;20-99&amp;quot;, &amp;quot;100-999&amp;quot;,&amp;quot;1,000-49,999&amp;quot;, &amp;quot;50,000+&amp;quot;)
+ggplot() +
+  geom_polygon(data=world, aes(x=long, y=lat,group=group), fill=&amp;quot;grey&amp;quot;, alpha=0.3) +
+  geom_point(data=X08_30_2020, aes(x=Long_, y=Lat,size=`Confirmed`,color=`Confirmed`), alpha=0.5) +
+  scale_size_continuous(name=&amp;quot;Confirmedcases&amp;quot;, trans=&amp;quot;log&amp;quot;, range=c(1,7), breaks=mybreaks,labels=mylabels) +
+  scale_colour_viridis_c(option=&amp;quot;inferno&amp;quot;, direction=-1,name=&amp;quot;Confirmed cases&amp;quot;, trans=&amp;quot;log&amp;quot;, breaks=mybreaks,labels=mylabels) +
+  guides(colour=guide_legend()) +
+  theme_void() +
+  theme(legend.position=&amp;quot;bottom&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Transformation introduced infinite values in discrete y-axis
+
+## Warning: Transformation introduced infinite values in discrete y-axis&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in sqrt(x): NaNs produced&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 94 rows containing missing values (geom_point).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-09-02-fs.en_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
+Now that we have a basic understanding of this virus, let’s continue to see how big the coverage of this virus is.&lt;/p&gt;
+&lt;p&gt;It can be clearly seen from the map that, except for the Antarctic and Arctic, this virus basically covers the whole world, and what I want to study today is Mexico. We can see from the map of Mexico that Mexico is also very infected. One of the countries.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>citation | Academic</title>
+    <link>/category/citation/</link>
+      <atom:link href="/category/citation/index.xml" rel="self" type="application/rss+xml" />
+    <description>citation</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 02 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>citation</title>
+      <link>/category/citation/</link>
+    </image>
+    
+    <item>
+      <title>reference list</title>
+      <link>/post/citation/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/citation/</guid>
+      <description>
+
+
+&lt;p&gt;hi :D
+here is my citation:
+1
+author = {JHU CSSE},
+title = Johns Hopkins University Center for SystemsScience and Engineering ,
+publisher = {JHU CSSE},
+year = {2019},
+url = {&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//systems.jhu.edu&#34; class=&#34;uri&#34;&gt;https://link.zhihu.com/?target=https%3A//systems.jhu.edu&lt;/a&gt;},&lt;/p&gt;
+&lt;p&gt;2
+&lt;span class=&#34;citation&#34;&gt;@Manual&lt;/span&gt;{,
+title = {coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset},
+author = {Rami Krispin and Jarrett Byrnes},
+year = {2020},
+note = {R package version 0.3.0},
+url = {&lt;a href=&#34;https://CRAN.R-project.org/package=coronavirus&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=coronavirus&lt;/a&gt;},
+publications = Rami Krispin and Jarrett Byrnes (2020). coronavirus: The 2019 Novel Coronavirus
+COVID-19 (2019-nCoV) Dataset. R package version 0.3.0.
+}&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,66 @@
+---
+title: what is the COVID_19
+author: chenjie
+date: '2020-08-30'
+slug: what is the COVID_19
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-09-02T14:55:33+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p>#hi i am chenjie :D
+2020 is not a good period. People all over the world have been badly affected by this virus. For example, we cannot go back to school for offline courses. This is an extraordinary period, so each of us should pay great attention to this epidemic and cannot be taken lightly.
+First, let’s take a look at popular science.
+#What is COVID-19?
+<em>Corona Virus Disease 2019 (COVID-19), abbreviated as “New coronavirus”, named by the World Health Organization as “Covid-19” refers to pneumonia caused by the 2019 new coronavirus infection.</em>
+#if i am positve COVID, what happend?
+<em>Novel coronavirus pneumonia is mainly manifested by fever, dry cough, fatigue, etc. A few patients are accompanied by nasal congestion, runny nose, diarrhea and other upper respiratory and digestive tract symptoms. Severe cases often have difficulty breathing after 1 week, and severe cases rapidly progress to acute respiratory distress syndrome, septic shock, difficult to correct metabolic acidosis, coagulation dysfunction, and multiple organ failure.</em></p>
+<pre class="r"><code>library(tidyverse)
+library(ggplot2)
+library(maps)
+library(viridis)
+library(readr)
+
+library(sf)
+library(tmap)
+library(spData)</code></pre>
+<pre class="r"><code>mybreaks&lt;- c(1, 20, 100, 1000, 50000)
+mylabels&lt;- c(&quot;1-19&quot;, &quot;20-99&quot;, &quot;100-999&quot;,&quot;1,000-49,999&quot;, &quot;50,000+&quot;)
+ggplot() +
+  geom_polygon(data=world, aes(x=long, y=lat,group=group), fill=&quot;grey&quot;, alpha=0.8) +
+  geom_point(data=mexico, aes(x=Long_, y=Lat,size=`Confirmed`,color=`Confirmed`), alpha=0.2) +
+  scale_size_continuous(name=&quot;Confirmedcases&quot;, trans=&quot;log&quot;, range=c(1,7), breaks=mybreaks,labels=mylabels) +
+  scale_colour_viridis_c(option=&quot;inferno&quot;, direction=-1,name=&quot;Confirmed cases&quot;, trans=&quot;log&quot;, breaks=mybreaks,labels=mylabels) +
+  guides(colour=guide_legend()) +
+  theme_void() +
+  theme(legend.position=&quot;bottom&quot;)</code></pre>
+<p><img src="/post/2020-09-02-fs.en_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>mybreaks&lt;- c(1, 20, 100, 1000, 50000)
+mylabels&lt;- c(&quot;1-19&quot;, &quot;20-99&quot;, &quot;100-999&quot;,&quot;1,000-49,999&quot;, &quot;50,000+&quot;)
+ggplot() +
+  geom_polygon(data=world, aes(x=long, y=lat,group=group), fill=&quot;grey&quot;, alpha=0.3) +
+  geom_point(data=X08_30_2020, aes(x=Long_, y=Lat,size=`Confirmed`,color=`Confirmed`), alpha=0.5) +
+  scale_size_continuous(name=&quot;Confirmedcases&quot;, trans=&quot;log&quot;, range=c(1,7), breaks=mybreaks,labels=mylabels) +
+  scale_colour_viridis_c(option=&quot;inferno&quot;, direction=-1,name=&quot;Confirmed cases&quot;, trans=&quot;log&quot;, breaks=mybreaks,labels=mylabels) +
+  guides(colour=guide_legend()) +
+  theme_void() +
+  theme(legend.position=&quot;bottom&quot;)</code></pre>
+<pre><code>## Warning: Transformation introduced infinite values in discrete y-axis
+
+## Warning: Transformation introduced infinite values in discrete y-axis</code></pre>
+<pre><code>## Warning in sqrt(x): NaNs produced</code></pre>
+<pre><code>## Warning: Removed 94 rows containing missing values (geom_point).</code></pre>
+<p><img src="/post/2020-09-02-fs.en_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+Now that we have a basic understanding of this virus, let’s continue to see how big the coverage of this virus is.</p>
+<p>It can be clearly seen from the map that, except for the Antarctic and Arctic, this virus basically covers the whole world, and what I want to study today is Mexico. We can see from the map of Mexico that Mexico is also very infected. One of the countries.</p>

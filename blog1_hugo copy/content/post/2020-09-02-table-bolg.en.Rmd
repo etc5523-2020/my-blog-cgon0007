@@ -1,0 +1,124 @@
+---
+title: table bolg
+author: chenjie
+date: '2020-09-02'
+slug: table-bolg
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-09-02T17:09:36+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+hi :D
+The third part is the table area, where you can find the data you want to find about Mexico. There is the following table for you to explore
+
+```{r  message=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(maps)
+library(viridis)
+library(readr)
+
+library(sf)
+library(tmap)
+library(spData)
+
+
+```
+
+```{r  message=FALSE,include=FALSE}
+library(readr)
+X08_30_2020 <- read_csv("~/Downloads/08-30-2020.csv")
+View(X08_30_2020)
+```
+```{r message=FALSE,include=FALSE }
+mexico <- X08_30_2020 %>% 
+  filter(`Country_Region`=="Mexico")
+```
+```{r setup, include = FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(broom)
+library(tidycat)
+library(stargazer)
+library(MASS)
+```
+```{r}
+DT::datatable(mexico,options = list(pagelength = 10))
+```
+library(formattable)
+mexico %>%
+  select(Confirmed,Deaths,Recovered) %>%
+  cor() %>%
+  as.data.frame() %>%
+  rownames_to_column("variable") %>%
+  formattable(list(area(col = 3.5)))
+
+```{r}
+mexico %>% 
+  select_if(is.numeric) %>% 
+  pivot_longer(everything(), values_to = "Confirmed", names_to = "Province_State") %>% 
+  group_by(Province_State) %>% 
+  filter(!is.na(Confirmed)) %>% 
+  summarise(n = n(), mean = mean(Confirmed), sd = sd(Confirmed), min = min(Confirmed),
+            Q1 = quantile(Confirmed, 0.25), 
+            Q3 = quantile(Confirmed, 0.75), max = max(Confirmed)) %>% 
+  slice(c(2, 1, 4, 3, 5)) %>% 
+  mutate(Province_State = recode(Province_State,
+                          bill_length_mm = "Bill length (mm)",
+                          bill_depth_mm = "Bill depth (mm)",
+                          flipper_length_mm = "Flipper length (mm)",
+                          body_mass_g = "Body mass (g)",
+                          year = "Year"),
+         mean = scales::comma(mean, 0.01),
+         sd = scales::comma(sd, 0.01),
+         min = round(min, 1), max = round(max, 1), 
+         Q1 = round(Q1, 1), Q3 = round(Q3, 1)) %>% 
+  kable(col.names = c("Statistic", "N", "Mean", "St. Dev.", "Min", "Pctl(25)", "Pctl(75)", "Max"), caption = "Summary statistics", align = "lrrrrrrr",
+        booktabs = TRUE)
+```
+
+```{r 2, include = FALSE}
+library(palmerpenguins)
+library(tidyverse)
+library(sparkline)
+library(DT)
+
+```
+```{r}
+mexico %>% 
+  group_by(Province_State) %>% 
+  summarise(
+    fivenum = list(setNames(as.vector(summary(na.omit(Confirmed))),
+                   c("Min", "Q1", "Median", "Mean", "Q3", "Max"))),
+    distribution = spk_chr(Confirmed, type = "box")) %>% 
+  unnest_wider(fivenum) %>% 
+  datatable(escape = FALSE,
+            options = list(paging = FALSE,
+                           dom = "t",
+                           fnDrawCallback = htmlwidgets::JS(
+  '
+function(){
+  HTMLWidgets.staticRender();
+}
+'
+))) %>% 
+  spk_add_deps() %>% 
+  formatRound(columns = c("Min", "Q1", "Mean", "Median", "Q3", "Max"), digits = 2)
+```
+
+
+
+
+
+
+
+
