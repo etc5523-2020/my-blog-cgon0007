@@ -128,7 +128,7 @@ ggplot(data=dt6,mapping=aes(x=date,y=cases,fill=type))+
   geom_bar(stat = "identity")
 ```
 The last figure\@ref(fig:plot6) is a figure that combines recovered, confirmed, and deaths, which more intuitively shows the ratio of the number of people who have recovered, confirmed, and death since the epidemic. As shown in this figure, the peak period for the diagnosis of the epidemic is from March to April, and the peak period for recovery is from April to May. At the same time, we can also find that the proportion of deaths is only a small part of them.
-
+ 
 
 # Acknowledge
 (tidyverse){Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani}
