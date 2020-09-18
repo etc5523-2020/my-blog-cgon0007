@@ -5,12 +5,168 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 16 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>blog2</title>
+      <link>/post/blog2-is-about-the-swiss/</link>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/blog2-is-about-the-swiss/</guid>
+      <description>
+
+
+&lt;div id=&#34;hi-this-is-my-second-blog-which-is-about-the-swiss.-d&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;hi, this is my second blog, which is about the swiss. :D&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;In the previous blog, I briefly introduced COVID. This blog is about Switzerland. The first part is why it is recommended to travel to Switzerland, and the second part is to analyze the epidemic situation in Switzerland.&lt;/em&gt;&lt;/p&gt;
+&lt;div id=&#34;part-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;part 1&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;which-country-should-i-go-to-during-the-epidemic&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Which country should I go to during the epidemic?&lt;/h1&gt;
+&lt;p&gt;I’ve briefly introduced covid19 in the previous blog. This blog is about Switzerland. The first part is why I recommend traveling to Switzerland. The second part is to analyze the epidemic situation in Switzerland.&lt;/p&gt;
+&lt;p&gt;As shown in this figure&lt;a href=&#34;#fig:plot1&#34;&gt;1&lt;/a&gt;, you can clearly see the impact of the virus in the world. I set the map to blue to better distinguish. The more severe the epidemic, the darker the color of their dots. Conversely, the less severe the epidemic, the lighter the dots. I believe that such an improvement can intuitively observe the distribution of the epidemic. It can be seen that the United States, Africa, Russia, and Southeast Asia are all areas with severe epidemics.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-16-blog2-is-about-the-swiss.en_files/figure-html/plot1-1.png&#34; alt=&#34;the world map of covid19 &#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: the world map of covid19
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot2&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-16-blog2-is-about-the-swiss.en_files/figure-html/plot2-1.png&#34; alt=&#34;covid19 in different country&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: covid19 in different country
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I believe that after months of blockade, everyone is eager to travel (the choice to recommend to Europeans, because Europeans can travel freely in Europe without a visa, and it may not be very convenient if you are not Europeans). For your good health, I highly recommend you to travel to Switzerland.&lt;/p&gt;
+&lt;p&gt;According to the survey, the most popular countries in Europe are the United Kingdom, France, Spain, Switzerland, Germany, and Italy. As shown in the figure@ref(fig: plot2), I show the epidemic maps of each of the six countries. This is an intuitive demonstration of the epidemic situation in the six countries, in detail (dividing six countries into four top-levels, the first level - no travel, the second level - high danger, the third level - moderate danger, the fourth level - low danger). Level one: Italy is the most serious country. Although his one-day case is not the highest, it has continued to grow for the longest time. The second level is that Spain and Germany are countries with more serious epidemics. Their one-day confirmed cases are very high, but their high growth duration is not long. The third level is Britain and France, which do not grow very fast in a single day and last for no longer in Italy. The fourth and safest country is Switzerland, which not only grows very low a day, but also lasts for a short time (3.15-4.15).&lt;/p&gt;
+&lt;p&gt;So from the point of view, Switzerland is a relatively safe country in Europe. You can go there at ease, but pay attention to your own protective measures&lt;/p&gt;
+&lt;div id=&#34;part-2&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;part 2&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analyze-the-epidemic-situation-in-switzerland.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;analyze the epidemic situation in Switzerland.&lt;/h1&gt;
+&lt;p&gt;The next report is to analyze the current epidemic situation in Switzerland. The content is divided into 4 pictures to give you an intuitive understanding of the current epidemic situation in Switzerland.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot3&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-16-blog2-is-about-the-swiss.en_files/figure-html/plot3-1.png&#34; alt=&#34;confirmed cases in Switzerland&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: confirmed cases in Switzerland
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot4&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-16-blog2-is-about-the-swiss.en_files/figure-html/plot4-1.png&#34; alt=&#34;Death cases in Switzerland&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: Death cases in Switzerland
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot5&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-16-blog2-is-about-the-swiss.en_files/figure-html/plot5-1.png&#34; alt=&#34;Recovered cases in Switzerland&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 5: Recovered cases in Switzerland
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;First of all, the first figure@ref(fig: plot3), we saw was the daily number of confirmed diagnoses in Switzerland during the epidemic. Here, the barplot has been specially selected to observe the peaks, troughs and trends of the epidemic more intuitively. In this picture, we can see that the peak of the epidemic in Switzerland is between March and April, and the number of confirmed cases can reach more than 1,000 people.&lt;/p&gt;
+&lt;p&gt;The second figure@ref(fig: plot4) describes the daily number of deaths in Switzerland during the epidemic. The difference from the previous figure is that the deaths are mainly concentrated between April and May, and the death toll can reach up to 70 people per day.&lt;/p&gt;
+&lt;p&gt;The third figure@ref(fig: plot5) describes the daily number of recovered in Switzerland during the epidemic. The same trend as the previous one is that recovered is also mainly concentrated between April and May, and the maximum number of rehabilitation can reach 1,500 people per day.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot6&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-16-blog2-is-about-the-swiss.en_files/figure-html/plot6-1.png&#34; alt=&#34;covid19 barchart in Swiss&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 6: covid19 barchart in Swiss
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The last figure@ref(fig: plot6) is a figure that combines recovered, confirmed, and deaths, which more intuitively shows the ratio of the number of people who have recovered, confirmed, and death since the epidemic. As shown in this figure, the peak period for the diagnosis of the epidemic is from March to April, and the peak period for recovery is from April to May. At the same time, we can also find that the proportion of deaths is only a small part of them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledge&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Acknowledge&lt;/h1&gt;
+&lt;p&gt;(tidyverse){Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D’Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani}&lt;/p&gt;
+&lt;p&gt;(ggplot2){Hadley Wickham}&lt;/p&gt;
+&lt;p&gt;(mapdata){Original S code by Richard A. Becker and Allan R. Wilks. R version by Ray Brownrigg.}&lt;/p&gt;
+&lt;p&gt;(coronavirus){Rami Krispin and Jarrett Byrnes}&lt;/p&gt;
+&lt;p&gt;(dplyr){Hadley Wickham and Romain François and Lionel {
+Henry} and Kirill Müller}
+# Bibliography
+## 1
+author = {JHU CSSE},
+title = Johns Hopkins University Center for SystemsScience and Engineering ,
+publisher = {JHU CSSE},
+year = {2019},
+url = {&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//systems.jhu.edu&#34; class=&#34;uri&#34;&gt;https://link.zhihu.com/?target=https%3A//systems.jhu.edu&lt;/a&gt;},&lt;/p&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;@Manual&lt;/span&gt;{,
+title = {coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset},
+author = {Rami Krispin and Jarrett Byrnes},
+year = {2020},
+note = {R package version 0.3.0},
+url = {&lt;a href=&#34;https://CRAN.R-project.org/package=coronavirus&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=coronavirus&lt;/a&gt;},
+publications = Rami Krispin and Jarrett Byrnes (2020). coronavirus: The 2019 Novel Coronavirus
+COVID-19 (2019-nCoV) Dataset. R package version 0.3.0.
+}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3&lt;/h2&gt;
+&lt;p&gt;Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software,
+4(43), 1686, &lt;a href=&#34;https://doi.org/10.21105/joss.01686&#34; class=&#34;uri&#34;&gt;https://doi.org/10.21105/joss.01686&lt;/a&gt;
+&lt;span class=&#34;citation&#34;&gt;@Article&lt;/span&gt;{,
+title = {Welcome to the {tidyverse}},
+author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D’Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
+year = {2019},
+journal = {Journal of Open Source Software},
+volume = {4},
+number = {43},
+pages = {1686},
+doi = {10.21105/joss.01686},
+}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-2&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4&lt;/h2&gt;
+&lt;p&gt;H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York,
+2016.
+&lt;span class=&#34;citation&#34;&gt;@Book&lt;/span&gt;{,
+author = {Hadley Wickham},
+title = {ggplot2: Elegant Graphics for Data Analysis},
+publisher = {Springer-Verlag New York},
+year = {2016},
+isbn = {978-3-319-24277-4},
+url = {&lt;a href=&#34;https://ggplot2.tidyverse.org&#34; class=&#34;uri&#34;&gt;https://ggplot2.tidyverse.org&lt;/a&gt;},
+}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-3&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;5&lt;/h2&gt;
+&lt;p&gt;Original S code by Richard A. Becker and Allan R. Wilks. R version by Ray Brownrigg.
+(2018). mapdata: Extra Map Databases. R package version 2.3.0.
+&lt;a href=&#34;https://CRAN.R-project.org/package=mapdata&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=mapdata&lt;/a&gt;
+&lt;span class=&#34;citation&#34;&gt;@Manual&lt;/span&gt;{,
+title = {mapdata: Extra Map Databases},
+author = {Original S code by Richard A. Becker and Allan R. Wilks. R version by Ray Brownrigg.},
+year = {2018},
+note = {R package version 2.3.0},
+url = {&lt;a href=&#34;https://CRAN.R-project.org/package=mapdata&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=mapdata&lt;/a&gt;},
+}&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section-4&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;6&lt;/h2&gt;
+&lt;p&gt;Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020). dplyr: A
+Grammar of Data Manipulation. R package version 1.0.2.
+&lt;a href=&#34;https://CRAN.R-project.org/package=dplyr&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=dplyr&lt;/a&gt;
+&lt;span class=&#34;citation&#34;&gt;@Manual&lt;/span&gt;{,
+title = {dplyr: A Grammar of Data Manipulation},
+author = {Hadley Wickham and Romain François and Lionel {
+Henry} and Kirill Müller},
+year = {2020},
+note = {R package version 1.0.2},
+url = {&lt;a href=&#34;https://CRAN.R-project.org/package=dplyr&#34; class=&#34;uri&#34;&gt;https://CRAN.R-project.org/package=dplyr&lt;/a&gt;},
+}&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>COVID-19 in Mexico</title>
@@ -23,9 +179,11 @@
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;#hi i am chenjie :D&lt;/p&gt;
+&lt;div id=&#34;hi-i-am-chenjie-d&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;hi i am chenjie :D&lt;/h1&gt;
 &lt;p&gt;2020 is not a good period. People all over the world have been badly affected by this virus. For example, we cannot go back to school for offline courses. This is an extraordinary period, so each of us should pay great attention to this epidemic and cannot be taken lightly.
 First, let’s take a look at popular science.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;what-is-covid-19&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;What is COVID-19?&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Corona Virus Disease 2019 (COVID-19), abbreviated as “New coronavirus”, named by the World Health Organization as “Covid-19” refers to pneumonia caused by the 2019 new coronavirus infection.&lt;/em&gt;&lt;/p&gt;

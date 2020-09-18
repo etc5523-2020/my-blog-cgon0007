@@ -1,0 +1,232 @@
+---
+title: blog2
+author: chenjie
+date: '2020-09-16'
+slug: blog2 is about the swiss
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-09-16T20:06:31+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+```{r set up , message=FALSE, echo=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(mapdata)
+library(coronavirus)
+library(dplyr)
+```
+
+# hi, this is my second blog, which is about the swiss. :D
+*In the previous blog, I briefly introduced COVID. This blog is about Switzerland. The first part is why it is recommended to travel to Switzerland, and the second part is to analyze the epidemic situation in Switzerland.*
+
+## part 1
+
+# Which country should I go to during the epidemic?
+I've briefly introduced covid19 in the previous blog. This blog is about Switzerland. The first part is why I recommend traveling to Switzerland. The second part is to analyze the epidemic situation in Switzerland.
+
+As shown in this figure\@ref(fig:plot1), you can clearly see the impact of the virus in the world. I set the map to blue to better distinguish. The more severe the epidemic, the darker the color of their dots. Conversely, the less severe the epidemic, the lighter the dots. I believe that such an improvement can intuitively observe the distribution of the epidemic. It can be seen that the United States, Africa, Russia, and Southeast Asia are all areas with severe epidemics.
+
+```{r ,message=FALSE,echo=FALSE ,warning=FALSE}
+map_df <- map_data("world")
+data("coronavirus")
+dt1 <- coronavirus %>%
+  filter(date == "2020-07-17",type == "confirmed")
+dt2 <- coronavirus %>%
+  filter(type == "confirmed", date == c("2020-03-03","2020-04-04","2020-05-05","2020-06-06","2020-07-07"),
+       ) %>%
+  dplyr::select(country, cases , type, date)
+d3 <- coronavirus %>%
+  filter(type == "confirmed",country == c("France","Italy","United Kingdom","Switzerland","Germany","Spain")) %>%
+  dplyr::select(country, cases , type, date) 
+dt4 <- coronavirus %>%
+  filter(country == "Switzerland",type=="confirmed"
+       ) %>%
+  dplyr::select(country, cases , type, date)
+dt5 <- coronavirus %>%
+  filter(country == "Switzerland",type=="death"
+       ) %>%
+  dplyr::select(country, cases , type, date)
+dt6 <- coronavirus %>%
+  filter(country == "Switzerland"
+       ) %>%
+  dplyr::select(country, cases , type, date)
+dt7 <- coronavirus %>%
+  filter(country == "Switzerland",type=="recovered"
+       ) %>%
+  dplyr::select(country, cases , type, date)
+X08 <- read_csv("~/Downloads/08-30-2020.csv")
+X01 <- X08 %>%
+  filter(Country_Region == "Switzerland")
+```
+```{r ,message=FALSE,echo=FALSE ,warning=FALSE}
+mapw <- left_join(
+  map_df,dt1,by = c("region" = "country"))
+```
+```{r plot1,echo=FALSE,warning=FALSE,fig.cap = "the world map of covid19 "}
+mybreaks<- c(1, 500, 5000, 25000, 50000)
+mylabels<- c("1-499", "500-4999", "5000-24999","25000-49,999", "50,000+")
+ggplot() +
+  geom_polygon(data=map_df, aes(x=long, y=lat,group=group),fill = "blue", alpha=0.9) +
+  geom_point(data=dt1, aes(x=long, y=lat,size=`cases`,color=`cases`), alpha=1) +
+  scale_size_continuous(name="Confirmedcases", trans="log", range=c(0.8,1), breaks=mybreaks,labels=mylabels) +
+  scale_colour_viridis_c(option="inferno", direction=-1,name="Confirmed cases", trans="log", breaks=mybreaks,labels=mylabels) +
+  guides(colour=guide_legend()) +
+  theme_void() +
+  theme(legend.position="bottom")
+warning = FALSE
+```
+```{r plot2,echo=FALSE,fig.cap="covid19 in different country"}
+ggplot(d3, aes(x=date, y=cases,  colour = country)) +
+  geom_line() +
+  facet_wrap(~country) +
+  theme_bw()  +
+  labs(title = '(plot2)covid19 in different country', x = 'date', y = 'cases') 
+``` 
+I believe that after months of blockade, everyone is eager to travel (the choice to recommend to Europeans, because Europeans can travel freely in Europe without a visa, and it may not be very convenient if you are not Europeans). For your good health, I highly recommend you to travel to Switzerland.
+
+According to the survey, the most popular countries in Europe are the United Kingdom, France, Spain, Switzerland, Germany, and Italy. As shown in the figure\@ref(fig: plot2), I show the epidemic maps of each of the six countries. This is an intuitive demonstration of the epidemic situation in the six countries, in detail (dividing six countries into four top-levels, the first level - no travel, the second level - high danger, the third level - moderate danger, the fourth level - low danger). Level one: Italy is the most serious country. Although his one-day case is not the highest, it has continued to grow for the longest time. The second level is that Spain and Germany are countries with more serious epidemics. Their one-day confirmed cases are very high, but their high growth duration is not long. The third level is Britain and France, which do not grow very fast in a single day and last for no longer in Italy. The fourth and safest country is Switzerland, which not only grows very low a day, but also lasts for a short time (3.15-4.15).
+
+So from the point of view, Switzerland is a relatively safe country in Europe. You can go there at ease, but pay attention to your own protective measures
+
+## part 2
+
+# analyze the epidemic situation in Switzerland.
+
+The next report is to analyze the current epidemic situation in Switzerland. The content is divided into 4 pictures to give you an intuitive understanding of the current epidemic situation in Switzerland.
+
+```{r plot3,echo=FALSE,fig.cap="confirmed cases in Switzerland",warning=FALSE}
+p3 <-barplot(dt4$cases,main="confirmed cases in Switzerland",names.arg=dt4$date,xlab="DATE",ylab="CASES",col=colors) 
+```
+
+
+
+
+```{r plot4,echo=FALSE,fig.cap="Death cases in Switzerland",warning=FALSE}
+p4 <-barplot(dt5$cases,main="Death cases in Switzerland",names.arg=dt4$date,xlab="DATE",ylab="CASES",col=colors) 
+
+```
+
+```{r plot5,echo=FALSE,fig.cap="Recovered cases in Switzerland",warning=FALSE}
+p5 <-barplot(dt7$cases,main="Recovered cases in Switzerland",names.arg=dt4$date,xlab="DATE",ylab="CASES",col=colors) 
+```
+First of all, the first figure\@ref(fig: plot3), we saw was the daily number of confirmed diagnoses in Switzerland during the epidemic. Here, the barplot has been specially selected to observe the peaks, troughs and trends of the epidemic more intuitively. In this picture, we can see that the peak of the epidemic in Switzerland is between March and April, and the number of confirmed cases can reach more than 1,000 people.
+
+The second figure\@ref(fig: plot4) describes the daily number of deaths in Switzerland during the epidemic. The difference from the previous figure is that the deaths are mainly concentrated between April and May, and the death toll can reach up to 70 people per day.
+
+The third figure\@ref(fig: plot5) describes the daily number of recovered in Switzerland during the epidemic. The same trend as the previous one is that recovered is also mainly concentrated between April and May, and the maximum number of rehabilitation can reach 1,500 people per day.
+
+
+
+```{r plot6,echo=FALSE,fig.cap="covid19 barchart in Swiss"}
+ggplot(data=dt6,mapping=aes(x=date,y=cases,fill=type))+
+  geom_bar(stat = "identity")
+```
+The last figure\@ref(fig: plot6) is a figure that combines recovered, confirmed, and deaths, which more intuitively shows the ratio of the number of people who have recovered, confirmed, and death since the epidemic. As shown in this figure, the peak period for the diagnosis of the epidemic is from March to April, and the peak period for recovery is from April to May. At the same time, we can also find that the proportion of deaths is only a small part of them.
+
+
+# Acknowledge
+(tidyverse){Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani}
+
+(ggplot2){Hadley Wickham}
+
+(mapdata){Original S code by Richard A. Becker and Allan R. Wilks. R version by Ray Brownrigg.}
+
+(coronavirus){Rami Krispin and Jarrett Byrnes}
+
+(dplyr){Hadley Wickham and Romain François and Lionel {
+             Henry} and Kirill Müller}
+# Bibliography
+## 1
+    author = {JHU CSSE},
+    title = Johns Hopkins University Center for SystemsScience and Engineering ,
+    publisher = {JHU CSSE},
+    year = {2019},
+    url = {https://link.zhihu.com/?target=https%3A//systems.jhu.edu},
+ 
+ 
+## 2 
+  @Manual{,
+    title = {coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset},
+    author = {Rami Krispin and Jarrett Byrnes},
+    year = {2020},
+    note = {R package version 0.3.0},
+    url = {https://CRAN.R-project.org/package=coronavirus},
+    publications = Rami Krispin and Jarrett Byrnes (2020). coronavirus: The 2019 Novel Coronavirus
+  COVID-19 (2019-nCoV) Dataset. R package version 0.3.0.
+  }
+
+
+## 3
+Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software,
+  4(43), 1686, https://doi.org/10.21105/joss.01686
+  @Article{,
+    title = {Welcome to the {tidyverse}},
+    author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
+    year = {2019},
+    journal = {Journal of Open Source Software},
+    volume = {4},
+    number = {43},
+    pages = {1686},
+    doi = {10.21105/joss.01686},
+  }
+  
+  
+## 4
+ H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York,
+  2016.
+  @Book{,
+    author = {Hadley Wickham},
+    title = {ggplot2: Elegant Graphics for Data Analysis},
+    publisher = {Springer-Verlag New York},
+    year = {2016},
+    isbn = {978-3-319-24277-4},
+    url = {https://ggplot2.tidyverse.org},
+  }
+
+## 5
+  Original S code by Richard A. Becker and Allan R. Wilks. R version by Ray Brownrigg.
+  (2018). mapdata: Extra Map Databases. R package version 2.3.0.
+  https://CRAN.R-project.org/package=mapdata
+  @Manual{,
+    title = {mapdata: Extra Map Databases},
+    author = {Original S code by Richard A. Becker and Allan R. Wilks. R version by Ray Brownrigg.},
+    year = {2018},
+    note = {R package version 2.3.0},
+    url = {https://CRAN.R-project.org/package=mapdata},
+  }
+
+
+
+## 6
+Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020). dplyr: A
+  Grammar of Data Manipulation. R package version 1.0.2.
+  https://CRAN.R-project.org/package=dplyr
+  @Manual{,
+    title = {dplyr: A Grammar of Data Manipulation},
+    author = {Hadley Wickham and Romain François and Lionel {
+             Henry} and Kirill Müller},
+    year = {2020},
+    note = {R package version 1.0.2},
+    url = {https://CRAN.R-project.org/package=dplyr},
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
