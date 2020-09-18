@@ -130,21 +130,21 @@ Figure 3: confirmed cases in Switzerland
 Figure 4: Death cases in Switzerland
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;The second figure&lt;a href=&#34;#fig:plot4&#34;&gt;4&lt;/a&gt; describes the daily number of deaths in Switzerland during the epidemic. The difference from the previous figure is that the deaths are mainly concentrated between April and May, and the death toll can reach up to 70 people per day.&lt;/p&gt;
+&lt;p&gt;The second figure&lt;a href=&#34;#fig:plot4&#34;&gt;4&lt;/a&gt;describes the daily number of deaths in Switzerland during the epidemic. The difference from the previous figure is that the deaths are mainly concentrated between April and May, and the death toll can reach up to 70 people per day.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot5&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;/post/2020-09-16-blog2-is-about-the-swiss.en_files/figure-html/plot5-1.png&#34; alt=&#34;Recovered cases in Switzerland&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 5: Recovered cases in Switzerland
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;The third figure&lt;a href=&#34;#fig:plot5&#34;&gt;5&lt;/a&gt; describes the daily number of recovered in Switzerland during the epidemic. The same trend as the previous one is that recovered is also mainly concentrated between April and May, and the maximum number of rehabilitation can reach 1,500 people per day.&lt;/p&gt;
+&lt;p&gt;The third figure&lt;a href=&#34;#fig:plot5&#34;&gt;5&lt;/a&gt;describes the daily number of recovered in Switzerland during the epidemic. The same trend as the previous one is that recovered is also mainly concentrated between April and May, and the maximum number of rehabilitation can reach 1,500 people per day.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:plot6&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;/post/2020-09-16-blog2-is-about-the-swiss.en_files/figure-html/plot6-1.png&#34; alt=&#34;covid19 barchart in Swiss&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 6: covid19 barchart in Swiss
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;The last figure&lt;a href=&#34;#fig:plot6&#34;&gt;6&lt;/a&gt; is a figure that combines recovered, confirmed, and deaths, which more intuitively shows the ratio of the number of people who have recovered, confirmed, and death since the epidemic. As shown in this figure, the peak period for the diagnosis of the epidemic is from March to April, and the peak period for recovery is from April to May. At the same time, we can also find that the proportion of deaths is only a small part of them.&lt;/p&gt;
+&lt;p&gt;The last figure&lt;a href=&#34;#fig:plot6&#34;&gt;6&lt;/a&gt;is a figure that combines recovered, confirmed, and deaths, which more intuitively shows the ratio of the number of people who have recovered, confirmed, and death since the epidemic. As shown in this figure, the peak period for the diagnosis of the epidemic is from March to April, and the peak period for recovery is from April to May. At the same time, we can also find that the proportion of deaths is only a small part of them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;acknowledge&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Acknowledge&lt;/h1&gt;

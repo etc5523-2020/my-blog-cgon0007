@@ -113,21 +113,21 @@ First of all, the first figure\@ref(fig:plot3), we saw was the daily number of c
 p4 <-barplot(dt5$cases,main="Death cases in Switzerland",names.arg=dt4$date,xlab="DATE",ylab="CASES",col=colors) 
 
 ```
-The second figure\@ref(fig:plot4) describes the daily number of deaths in Switzerland during the epidemic. The difference from the previous figure is that the deaths are mainly concentrated between April and May, and the death toll can reach up to 70 people per day.
+The second figure\@ref(fig:plot4)describes the daily number of deaths in Switzerland during the epidemic. The difference from the previous figure is that the deaths are mainly concentrated between April and May, and the death toll can reach up to 70 people per day.
 
 
 
 ```{r plot5,echo=FALSE,fig.cap="Recovered cases in Switzerland",warning=FALSE}
 p5 <-barplot(dt7$cases,main="Recovered cases in Switzerland",names.arg=dt4$date,xlab="DATE",ylab="CASES",col=colors) 
 ```
-The third figure\@ref(fig:plot5) describes the daily number of recovered in Switzerland during the epidemic. The same trend as the previous one is that recovered is also mainly concentrated between April and May, and the maximum number of rehabilitation can reach 1,500 people per day.
+The third figure\@ref(fig:plot5)describes the daily number of recovered in Switzerland during the epidemic. The same trend as the previous one is that recovered is also mainly concentrated between April and May, and the maximum number of rehabilitation can reach 1,500 people per day.
 
 
 ```{r plot6,echo=FALSE,fig.cap="covid19 barchart in Swiss"}
 ggplot(data=dt6,mapping=aes(x=date,y=cases,fill=type))+
   geom_bar(stat = "identity")
 ```
-The last figure\@ref(fig:plot6) is a figure that combines recovered, confirmed, and deaths, which more intuitively shows the ratio of the number of people who have recovered, confirmed, and death since the epidemic. As shown in this figure, the peak period for the diagnosis of the epidemic is from March to April, and the peak period for recovery is from April to May. At the same time, we can also find that the proportion of deaths is only a small part of them.
+The last figure\@ref(fig:plot6)is a figure that combines recovered, confirmed, and deaths, which more intuitively shows the ratio of the number of people who have recovered, confirmed, and death since the epidemic. As shown in this figure, the peak period for the diagnosis of the epidemic is from March to April, and the peak period for recovery is from April to May. At the same time, we can also find that the proportion of deaths is only a small part of them.
  
 
 # Acknowledge
