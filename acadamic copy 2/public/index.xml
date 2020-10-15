@@ -104,18 +104,22 @@
 &lt;h3&gt;3.how to use it?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;you can just pick the app link.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;here is this app’s github link
-&lt;iframe src=&#34;https://github.com/etc5523-2020/shiny-assessment-cgon0007&#34; width=&#34;40%&#34; height=&#34;90&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/etc5523-2020/shiny-assessment-cgon0007&#34; class=&#34;uri&#34;&gt;https://github.com/etc5523-2020/shiny-assessment-cgon0007&lt;/a&gt; .&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;you can clone from this link, and run in you rstudio.(just pick the “run app”)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;here is this app’s github link:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://github.com/search?q=cgon0007&#34; width=&#34;80%&#34; height=&#34;90&#34;&gt;
+&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/etc5523-2020/shiny-assessment-cgon0007&#34; class=&#34;uri&#34;&gt;https://github.com/etc5523-2020/shiny-assessment-cgon0007&lt;/a&gt; .&lt;/li&gt;
+&lt;li&gt;you can clone from this link, and run in you rstudio.(just pick the “run app”)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-function-about-this-app&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;4.what function about this app?&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-10-12-blog3-shiny-app.en_files/shinycut.png&#34; alt=&#34;screencut&#34; /&gt;
+* This app can intuitively display the countries with the most confirmed, deaths, and recovery, and it can also directly see the changes during the epidemic in different countries, and use this as a basis to judge whether the epidemic prevention measures in different countries are effective.
+And at the end, there is a table to see all the data in detail, which is convenient for people to check.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;This app can intuitively display the countries with the most confirmed, deaths, and recovery, and it can also directly see the changes during the epidemic in different countries, and use this as a basis to judge whether the epidemic prevention measures in different countries are effective.
-And at the end, there is a table to see all the data in detail, which is convenient for people to check.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;more information see the readme.MD *&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;more information see the readme.MD *&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;

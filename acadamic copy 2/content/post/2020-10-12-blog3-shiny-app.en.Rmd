@@ -28,13 +28,15 @@ https://chenjie-gong.shinyapps.io/covid19/
 ### 3.how to use it?
 * you can just pick the app link.
 
-* here is this app's github link 
-<iframe src="https://github.com/etc5523-2020/shiny-assessment-cgon0007" width="40%" height="90"></iframe>
+* here is this app's github link:
+
+<iframe src="https://github.com/search?q=cgon0007" width="80%" height="90"></iframe>
 
 * https://github.com/etc5523-2020/shiny-assessment-cgon0007 .
 * you can clone from this link, and run in you rstudio.(just pick the "run app")
 
 ### 4.what function about this app?
+![screencut](/post/2020-10-12-blog3-shiny-app.en_files/shinycut.png)
 * This app can intuitively display the countries with the most confirmed, deaths, and recovery, and it can also directly see the changes during the epidemic in different countries, and use this as a basis to judge whether the epidemic prevention measures in different countries are effective.
 And at the end, there is a table to see all the data in detail, which is convenient for people to check.
 
