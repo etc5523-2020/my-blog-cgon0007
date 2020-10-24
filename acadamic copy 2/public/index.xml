@@ -77,6 +77,123 @@
     </item>
     
     <item>
+      <title>PACKAGE REVIEW</title>
+      <link>/post/peer-reviewing-package/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/post/peer-reviewing-package/</guid>
+      <description>
+
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;In this blog post I will be reviewing alangewerc’s R package &lt;code&gt;covidshiny&lt;/code&gt; which is containing coronavirus data, functions, and shiny application. The development version from &lt;a href=&#34;https://github.com/etc5523-2020/r-package-assessment-alangewerc&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The goal of CovidShiny is to present the user the evolution of the pandemic related to COVID-19 across the world. This is accomplished by a range of visualizations such as dot density map, table and stacked plots. This visualizations are presented in a Shiny web app.&lt;/p&gt;
+&lt;div id=&#34;what-did-i-think-this-package-would-do-did-it-do-it&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What did I think this package would do? Did it do it?&lt;/h2&gt;
+&lt;p&gt;I am going to break this question up into four subsections to consider.&lt;/p&gt;
+&lt;div id=&#34;the-datasets&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Datasets&lt;/h4&gt;
+&lt;p&gt;When I entered &lt;code&gt;covidshiny::coviddata&lt;/code&gt;and &lt;code&gt;covidshiny::preprocessedcoviddata&lt;/code&gt; into the console they did exactly what I thought they would do. They presented the relevant data frames, which were then called upon in the app.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-launch-app-function&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Launch App Function&lt;/h4&gt;
+&lt;p&gt;The &lt;code&gt;covidshiny::launch_app()&lt;/code&gt; launched the application, as expected. This function was particularly useful , because it can help people quickly access this application.
+#### The column_plotly function&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;column_plotly&lt;/code&gt; function generated a column in a fluidrow with a plotly inside.&lt;/p&gt;
+When I entered the example code into the console it can generated it
+(
+&lt;div class=&#34;col-sm-3&#34;&gt;
+&lt;div id=&#34;plotlytotalcases&#34; class=&#34;plotly html-widget html-widget-output shiny-report-size&#34; style=&#34;width:100%; height:300px; &#34;&gt;
+
+&lt;/div&gt;
+&lt;p&gt;)
+I get this output, I think it’s work in the shiny app, because this function only check n_char and n_input, and set column(3), height= ‘300px’.
+so it work, well job :D&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-plot_cases-function&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The plot_cases function&lt;/h4&gt;
+&lt;p&gt;The &lt;code&gt;plot_cases&lt;/code&gt; function his function gives the user a stacked barchart plotly after performing dplyr::filtering in the dataset CovidData.&lt;/p&gt;
+&lt;p&gt;This function relies on the user input. Using this function, the application generates plots displaying the deaths per-million.&lt;/p&gt;
+&lt;p&gt;When I entered the &lt;code&gt;covidshiny::plot_cases&lt;/code&gt; in the console, it can generated it(&amp;lt;shiny.render.function&amp;gt; ), so yes I think this function is work.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;improvements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Improvements&lt;/h2&gt;
+&lt;div id=&#34;the-code&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Code&lt;/h4&gt;
+&lt;p&gt;I think the code is well-written, however, it cannot pass the R-CMD check.
+I just use devtool::check() in local , I find the problem in the vignette file.
+so I recommend you re-building ‘shinyCovid.Rmd’ to find the error.
+The second problem is your set duplicate chunk label ‘setup’.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-shiny-application&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Shiny Application&lt;/h4&gt;
+&lt;p&gt;The app This shiny application allows user to visualise different variables regarding cases and deaths of Covid-19 across the world. Multiple tools are used such as Map, table and plots.&lt;/p&gt;
+&lt;p&gt;I think the only improvement that in the second part ,you can fecat the figure only 2 or 3 nrow,because it can more clearly show the information.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-documentation&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Documentation&lt;/h4&gt;
+&lt;p&gt;The goal of CovidShiny is to present the user the evolution of the pandemic related to COVID-19 across the world. This is accomplished by a range of visualizations such as dot density map, table and stacked plots. This visualizations are presented in a Shiny web app.&lt;/p&gt;
+&lt;p&gt;The user may interact with the data in a variety of forms, using sliders, action buttons and input boxes that will define what variables will presented in each visualization.&lt;/p&gt;
+&lt;p&gt;We create a processed dataset that can be accessed with function covidData. It is the same dataset but in a tidy format. The user can access the pre processed data with `preProcessedCovidData&#34;.&lt;/p&gt;
+&lt;p&gt;This package has also improved the previous Shiny application by creating new functions that improve the logic of the application, reducing the number of line of codes in the Ui and Server functions.&lt;/p&gt;
+&lt;p&gt;Finally, diverse tests were put in place to make sure functions are working properly. To know more about this package access the following website.&lt;/p&gt;
+&lt;p&gt;The documentation in the README file is very detailed and provides a great overview of the package and the application. good job!&lt;/p&gt;
+&lt;p&gt;I think the only improvement that you need show the data’s variable ,obeserve and
+citation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;i-learn-from-this-review&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;I learn from this review&lt;/h2&gt;
+&lt;p&gt;1.I learn a lot in reviewing the shiny app, I think put the UI and SERVER in different file is good to people read.
+2.use the cols_align() function in the UI
+3.In the file using &lt;code&gt;######&lt;/code&gt;as a dividing line to show the functions of different partitions.
+just like this:
+&lt;code&gt;#####################################&lt;/code&gt;
+&lt;code&gt;## Table - using GT&lt;/code&gt;
+&lt;code&gt;#####################################&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;appendix&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Appendix&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;package-review&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Package Review&lt;/h2&gt;
+&lt;p&gt;This package is embedding a Shiny application dashboard about COVID-19. It was developed for an assessment of the unit “ETC5523 - Communicating with Data” of the Master of Business Analytics at Monash University.&lt;/p&gt;
+&lt;div id=&#34;documentation&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Documentation&lt;/h4&gt;
+&lt;p&gt;The package includes all the following forms of documentation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;strong&gt;A statement of need&lt;/strong&gt; clearly stating problems the software is designed to solve and its target audience in README&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;strong&gt;Installation instructions:&lt;/strong&gt; for the development version of package and any non-standard dependencies in README&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;strong&gt;Function Documentation:&lt;/strong&gt; for all exported functions in R help&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;strong&gt;Examples&lt;/strong&gt; for all exported functions in R Help that run successfully locally&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;functionality&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Functionality&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;strong&gt;Installation:&lt;/strong&gt; Installation succeeds as documented.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;strong&gt;Functionality:&lt;/strong&gt; Any functional claims of the software been confirmed.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
+&lt;strong&gt;Performance:&lt;/strong&gt; Any performance claims of the software been confirmed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;review-comments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Review Comments&lt;/h3&gt;
+&lt;p&gt;I think you did excellent job :P&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>blog3—shiny app</title>
       <link>/post/blog3-shiny-app/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
